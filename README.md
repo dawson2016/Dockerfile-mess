@@ -6,7 +6,6 @@ jdkapr
 mysql
 officeconvert
 tomcat7
-activemq
 jre
 mysql-centos
 tomcat9
