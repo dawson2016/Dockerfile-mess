@@ -9,7 +9,6 @@ tomcat7
 jre
 mysql-centos
 tomcat9
-apollo
 jre-cat
 nginx
 pdf2swf
