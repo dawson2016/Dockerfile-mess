@@ -1,2 +1,26 @@
 # Dockerfile-mess
 各种常用的Dockerfile
+包括：
+activemq
+jdkapr
+mysql
+officeconvert
+tomcat7
+activemq
+jre
+mysql-centos
+tomcat9
+apollo
+jre-cat
+nginx
+pdf2swf
+jre-pdf2swf
+nginx-office
+haproxy
+mariadb
+ocrmypdf
+redis
+zookeeper
+jdk
+mq
+office 
