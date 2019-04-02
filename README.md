@@ -2,6 +2,7 @@
 各种常用的Dockerfile
 包括：
 activemq
+haproxy
 jdkapr
 mysql
 officeconvert
@@ -14,7 +15,6 @@ nginx
 pdf2swf
 jre-pdf2swf
 nginx-office
-haproxy
 mariadb
 ocrmypdf
 redis
