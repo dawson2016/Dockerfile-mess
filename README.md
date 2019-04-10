@@ -22,3 +22,4 @@ zookeeper
 jdk
 mq
 office 
+ubuntu-tornado-libreoffice
