@@ -5,6 +5,15 @@ ENV JAVA_VERSION=8 \
     JAVA_BUILD=13 \
     JAVA_PATH=96a7b8442fe848ef90c96a2fad6ed6d1 \
     JAVA_HOME="/usr/lib/jvm/default-jvm"
+RUN wget -q -O /etc/apk/keys/sgerrand.rsa.pub https://alpine-pkgs.sgerrand.com/sgerrand.rsa.pub  \
+    && cd /tmp \
+    && wget http://yaml.hseduyun.net/tools/glibc-2.30-r0.apk  \
+    && wget http://yaml.hseduyun.net/tools/glibc-bin-2.30-r0.apk  \
+    && wget http://yaml.hseduyun.net/tools/glibc-i18n-2.30-r0.apk   \
+    && apk add --no-cache glibc-2.30-r0.apk  glibc-bin-2.30-r0.apk glibc-i18n-2.30-r0.apk  
+ENV LANG zh_CN.UTF-8
+RUN /usr/glibc-compat/bin/localedef --force --inputfile POSIX --charmap UTF-8 zh_CN.UTF-8  || true && echo "export LANG=zh_CN.UTF-8" > /etc/profile.d/locale.sh  
+RUN rm -f /tmp/glibc* 
 COPY  glibc-2.25-r0.apk /tmp/
 COPY  glibc-bin-2.25-r0.apk /tmp/
 RUN   echo 'http://mirrors.ustc.edu.cn/alpine/edge/main' > /etc/apk/repositories \
